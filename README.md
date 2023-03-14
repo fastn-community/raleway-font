@@ -1,43 +1,55 @@
-# Welcome to your [FASTN site](https://fastn.io/)
+# Raleway : FPM Font Package
 
-FASTN Blank Package Template Repo
+This repository contains a [fpm font package](https://fpm.dev/featured/fonts/) containing [Google Font: 
+Raleway]https://fonts.google.com/specimen/Raleway/about?query=ralew).
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/fifthtry/fastn-heroku&env[DOWNLOAD_BASE_URL]=https://raw.githubusercontent.com/fifthtry/raleway-font/main/)
+Raleway is an elegant sans-serif typeface family. Initially designed by Matt McInerney as a single thin weight, it was expanded into a 9 weight family by Pablo Impallari and Rodrigo Fuenzalida in 2012 and iKerned by Igino Marini. A thorough review and italic was added in 2016.
 
-
-> 🧑‍🚀 **Seasoned traveler?** update this file. Enjoy!
-
-![doc-site](doc-site-example.png)
+It is a display face and the download features both old style and lining numerals, standard and discretionary ligatures, a pretty complete set of diacritics, as well as a stylistic alternate inspired by more geometric sans-serif typefaces than its neo-grotesque inspired default character set.
 
 
-## 🚀 Project Structure
 
-Inside of your FASTN project, you'll see the following folders and files:
+Designers: Matt McInerney, Pablo Impallari, Rodrigo Fuenzalida
 
-```
-/
-├── .build/
-│   └── index.html
-├── .packages/
-│   └── fifthtry.github.io/
-│   	└── All downloaded dependencies
-│   	
-├── FASTN.ftd
-├── index.ftd
-└── README.md
+## How To Use This Font In Your FPM Package:
+
+[Read the docs and demo](https://fifthtry.github.io/raleway-font).
+
+TLRD:
+
+Include fifthtry.github.io/raleway-font package into `FPM.ftd` file:
+
+```ftd
+;-- fpm.dependency: fifthtry.github.io/raleway-font
 ```
 
-## 🧞 Commands
+Inside your `FPM/config.ftd` use the font:
 
-All commands are run from the root of the project, from a terminal:
+```ftd
+;-- import: fifthtry.github.io/raleway-font/assets as raleway
 
-| Command                | Action                                             |
-| :--------------------- | :------------------------------------------------- |
-| `fastn build`            | FASTN builder installs all `FASTN` dependencies        |
-| `fastn serve`            | Starts local dev server at available port`localhost:8000`          |
+;-- fpm.type.headline-small: $raleway.fonts.Raleway
+```
 
+Now if in any file you do:
 
+```ftd
+;-- ftd.text:
+role: $fpm.type.headline-small
+```
+
+You will see the `Raleway` font.
 
 ## 👀 Want to learn more?
 
-Feel free to check [our documentation](https://fastn.io/) or jump into our [FifthTry Discord server](https://discord.gg/bucrdvptYd).
+Feel free to check [our documentation](https://fpm.dev/) or jump into our [FifthTry Discord 
+server](https://discord.gg/bucrdvptYd).
+
+## License
+
+Since Raleway  Font is under [OFL](https://fonts.google.com/specimen/Raleway/about?query=ralew), this FPM wrapper is also
+under [OFL](LICENSE).
+
+
+
+
