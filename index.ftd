@@ -1,51 +1,121 @@
--- import: <user_name>.github.io/<repo_name>/assets
+-- import: fifthtry.github.io/raleway-font/assets as raleway-assets
+-- import: fifthtry.github.io/package-doc/doc as pd
+-- import: fifthtry.github.io/package-doc/code-block as cb
+-- import: fifthtry.github.io/package-doc/typography as tf
+-- import: fastn
 
 
 
--- ds.page: Welcome to your [FASTN site](https://fastn.dev/)
+-- ftd.font-size raleway-demo:
+line-height: 36
+size: 22
+letter-spacing: 0
+
+-- ftd.font-size raleway-demo-heading:
+line-height: 56
+size: 48
+letter-spacing: 0
+
+
+-- ftd.type raleway-font-desktop:
+size.px: 40
+weight: 900
+font-family: $raleway-assets.fonts.Raleway
+
+
+-- ftd.type raleway-font-mobile:
+size.px: 40
+weight: 900
+font-family: $raleway-assets.fonts.Raleway
+
+
+-- ftd.responsive-type raleway-font:
+desktop: $raleway-font-desktop
+mobile: $raleway-font-mobile
+
+-- ftd.type raleway-font-heading: $raleway-assets.fonts.raleway
+desktop: $raleway-demo-heading
+mobile: $raleway-demo-heading
+xl: $raleway-demo-heading
+weight: 400
 
 -- ftd.column:
-align-self: center
+width: fill-container
+padding-horizontal.px: 50
+padding-horizontal.px if { ftd.device == "mobile" }: 20
+background.solid: $inherited.colors.background.base
+;;id: parent
 
--- chat.message-left: Yo! I am Amit Upadhyay, CEO of FifthTry, welcome to the new world of FTD.
 
--- ds.markdown: 
+-- pd.package: raleway - fastn font
+name: fifthtry.github.io/raleway-font
 
-You reached the right place, and from here let me assure you, your FTD journey is going superfast. 🙂
+This component consist of Google raleway font with all it's styles from Thin-100 to Black-900 Italic.
 
--- end: chat.message-left
 
--- chat.message-right:  😊 Liking this chat component?
+-- pd.component: raleway - fastn font
+name: https://github.com/FifthTry/raleway
 
--- ds.markdown:
+This component consist of Google raleway font with all it's styles from Thin-100 to Black-900 Italic.
 
-[Click here to learn more](https://fifthtry.github.io/bling/chat/)
-👍
 
--- end: chat.message-right
 
--- end: ftd.column
+-- tf.h3: How to use
 
--- ds.h1: How to use?
+Include fifthtry.github.io/raleway-font package into FASTN.ftd file
 
-It's very simple like making a sandwich. Create new `.ftd` file and just say:
-
--- ds.code: `-- ds.page` 
+-- cb.code:
 lang: ftd
 
-\-- ds.page: Your page title goes here
+\-- fastn.dependency: fifthtry.github.io/raleway-font as raleway
 
-Your page content goes here.
-
-
--- ds.h1: Need sidebar at right side of page?
-
-Here it is, [use this document](https://fifthtry.github.io/doc-site/docs/right-sidebar/).
+\-- fastn.auto-import: raleway
 
 
--- ds.h1: 👀 Learn FTD and become a pro?
+-- tf.markdown:
 
-You are one click away, just check [our documentation](https://fastn.dev/) and 
-dont forget to jump into our [FifthTry Discord server](https://discord.gg/bucrdvptYd).
+Inside your .ftd file to add raleway dependency and create custom font as given 
+in below code:
 
--- end: ds.page
+-- cb.code:
+lang: ftd
+
+\-- import: fifthtry.github.io/raleway-font/assets as raleway-assets
+\-- import: fastn
+
+\-- How to: define a custom font:-
+
+\-- ftd.type raleway-font-desktop:
+size.px: 40
+weight: 900
+font-family: $raleway-assets.fonts.raleway
+
+
+\-- ftd.type raleway-font-mobile:
+size.px: 40
+weight: 900
+font-family: $raleway-assets.fonts.raleway
+
+
+\-- ftd.responsive-type raleway-font:
+desktop: $raleway-font-desktop
+mobile: $raleway-font-mobile
+
+
+\-- How to: invoke a custom font:-
+
+\-- ftd.text: Todos os seres humanos nascem livres e iguais em dignidade.  
+role: $raleway-font
+color: $inherited.colors.text-strong
+margin-bottom.px: 24
+
+-- tf.h2: `raleway-font` weight 900 40px:
+
+See below how it will render on your browser:
+
+-- ftd.text: Todos os seres humanos nascem livres e iguais em dignidade.  
+role: $raleway-font
+color: $inherited.colors.text-strong
+margin-bottom.px: 24
+
+-- end: ftd.column
