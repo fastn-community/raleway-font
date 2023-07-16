@@ -1,121 +1,102 @@
--- import: fifthtry.github.io/raleway-font/assets as raleway-assets
 -- import: fifthtry.github.io/package-doc/doc as pd
--- import: fifthtry.github.io/package-doc/code-block as cb
--- import: fifthtry.github.io/package-doc/typography as tf
--- import: fastn
+-- import: fifthtry.github.io/package-doc/forest-theme as ds
+-- import: fastn-community.github.io/raleway-font/custom
+-- import: fifthtry.github.io/package-doc/footer
 
 
 
--- ftd.font-size raleway-demo:
-line-height: 36
-size: 22
-letter-spacing: 0
 
--- ftd.font-size raleway-demo-heading:
-line-height: 56
-size: 48
-letter-spacing: 0
+-- ds.page: 
+show-footer: true
+site-name: `raleway-font`
 
+-- ds.page.footer:
 
--- ftd.type raleway-font-desktop:
-size.px: 40
-weight: 900
-font-family: $raleway-assets.fonts.Raleway
+-- footer.fastn-footer:
 
+-- end: ds.page.footer
 
--- ftd.type raleway-font-mobile:
-size.px: 40
-weight: 900
-font-family: $raleway-assets.fonts.Raleway
+-- pd.package: raleway-font package
+name: fastn-community.github.io/raleway-font
 
+This FTD font `raleway-font` can be used for your ftd web projects. 
 
--- ftd.responsive-type raleway-font:
-desktop: $raleway-font-desktop
-mobile: $raleway-font-mobile
+To Use this raleway-font inside `FTD` project visit [opensans-typography](https://fastn-community.github.io/opensans-typography).
 
--- ftd.type raleway-font-heading: $raleway-assets.fonts.raleway
-desktop: $raleway-demo-heading
-mobile: $raleway-demo-heading
-xl: $raleway-demo-heading
-weight: 400
+-- ds.h3: raleway-font various sizes
 
--- ftd.column:
-width: fill-container
-padding-horizontal.px: 50
-padding-horizontal.px if { ftd.device == "mobile" }: 20
-background.solid: $inherited.colors.background.base
-;;id: parent
-
-
--- pd.package: raleway - fastn font
-name: fifthtry.github.io/raleway-font
-
-This component consist of Google raleway font with all it's styles from Thin-100 to Black-900 Italic.
-
-
--- pd.component: raleway - fastn font
-name: https://github.com/FifthTry/raleway
-
-This component consist of Google raleway font with all it's styles from Thin-100 to Black-900 Italic.
-
-
-
--- tf.h3: How to use
-
-Include fifthtry.github.io/raleway-font package into FASTN.ftd file
-
--- cb.code:
-lang: ftd
-
-\-- fastn.dependency: fifthtry.github.io/raleway-font as raleway
-
-\-- fastn.auto-import: raleway
-
-
--- tf.markdown:
-
-Inside your .ftd file to add raleway dependency and create custom font as given 
-in below code:
-
--- cb.code:
-lang: ftd
-
-\-- import: fifthtry.github.io/raleway-font/assets as raleway-assets
-\-- import: fastn
-
-\-- How to: define a custom font:-
-
-\-- ftd.type raleway-font-desktop:
-size.px: 40
-weight: 900
-font-family: $raleway-assets.fonts.raleway
-
-
-\-- ftd.type raleway-font-mobile:
-size.px: 40
-weight: 900
-font-family: $raleway-assets.fonts.raleway
-
-
-\-- ftd.responsive-type raleway-font:
-desktop: $raleway-font-desktop
-mobile: $raleway-font-mobile
-
-
-\-- How to: invoke a custom font:-
-
-\-- ftd.text: Todos os seres humanos nascem livres e iguais em dignidade.  
-role: $raleway-font
+-- ftd.text: 
+role: $custom.raleway-size-12-400
 color: $inherited.colors.text-strong
-margin-bottom.px: 24
 
--- tf.h2: `raleway-font` weight 900 40px:
+`font-size: 12px, font-weight: 400` 
 
-See below how it will render on your browser:
+👉 The quick brown fox jumps over the lazy dog 
 
--- ftd.text: Todos os seres humanos nascem livres e iguais em dignidade.  
-role: $raleway-font
+
+-- ftd.text: 
+role: $custom.raleway-size-12-800
 color: $inherited.colors.text-strong
-margin-bottom.px: 24
 
--- end: ftd.column
+`font-size: 12px, font-weight: 500` 
+
+👉 The quick brown fox jumps over the lazy dog 
+
+-- ftd.text: 
+role: $custom.raleway-size-12-800
+color: $inherited.colors.text-strong
+
+`font-size: 12px, font-weight: 800` 
+
+👉 The quick brown fox jumps over the lazy dog 
+
+
+-- ftd.text: 
+role: $custom.raleway-size-18-400
+color: $inherited.colors.text-strong
+
+`font-size: 18px, font-weight: 400` 
+
+👉 The quick brown fox jumps over the lazy dog 
+
+-- ftd.text: 
+role: $custom.raleway-size-18-500
+color: $inherited.colors.text-strong
+
+`font-size: 18px, font-weight: 500` 
+
+👉 The quick brown fox jumps over the lazy dog 
+
+-- ftd.text: 
+role: $custom.raleway-size-18-800
+color: $inherited.colors.text-strong
+
+`font-size: 18px, font-weight: 800` 
+
+👉 The quick brown fox jumps over the lazy dog 
+
+-- ftd.text: 
+role: $custom.raleway-size-48-400
+color: $inherited.colors.text-strong
+
+`font-size: 48px, font-weight: 400` 
+
+👉 The quick brown fox jumps over the lazy dog 
+
+-- ftd.text: 
+role: $custom.raleway-size-48-500
+color: $inherited.colors.text-strong
+
+`font-size: 48px, font-weight: 500` 
+
+👉 The quick brown fox jumps over the lazy dog 
+
+-- ftd.text:
+role: $custom.raleway-size-48-800
+color: $inherited.colors.text-strong
+
+`font-size: 48px, font-weight: 800` 
+
+👉 The quick brown fox jumps over the lazy dog 
+
+-- end: ds.page
