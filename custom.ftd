@@ -1,0 +1,286 @@
+-- import: fastn-community.github.io/raleway-font/assets as raleway-assets
+-- import: fifthtry.github.io/package-doc/doc as pd
+-- import: fifthtry.github.io/package-doc/forest-theme as ds
+-- import: fifthtry.github.io/package-doc/footer
+
+;; ⚠️fastn-builders::⚠️ before using this file please find and replace raleway
+;; with font name you have given inside 
+;; `fastn-community.github.io/raleway/FASTN.ftd file
+
+
+
+
+
+
+-- ds.page: 
+show-footer: true
+site-name: `raleway-font`
+
+-- ds.page.footer:
+
+-- footer.fastn-footer:
+
+-- end: ds.page.footer
+
+-- pd.package: FTD raleway package
+name: fastn-community.github.io/raleway-font
+
+This FTD font `raleway` package is for your ftd web projects. To Use this
+raleway inside `FTD` project follow below instructions.
+
+-- ds.h3: How to use raleway?
+
+-- ds.code: Add this to your FASTN.ftd
+lang: ftd
+
+\-- fastn.dependency: fastn-community.github.io/raleway-font
+
+-- ds.markdown: 
+
+After adding raleway dependency inside you `FASTN.ftd` file, You need to add
+raleway assets and import it inside you `ftd` file where you are using this
+font for your custom font types. To include raleway into your `ftd` file
+follow below instructions.
+
+-- ds.code:
+lang: ftd
+
+\-- import: fastn-community.github.io/raleway-font/assets as raleway-assets
+
+
+-- ds.h3: How to create a custom raleway type? 
+
+-- ds.markdown: 
+
+How to use `ftd.type` to create a custom font `types` using raleway? 
+
+We don't recommend creating custom types. We recommend to use 
+our [raleway-typography](https://fastn-community.github.io/raleway-typography)
+
+If you're using [raleway-typography](https://fastn-community.github.io/raleway-typography) 
+and still your designer has introduced new font size which is not included or 
+part of our [raleway-typography](https://fastn-community.github.io/raleway-typography) 
+then only define custom types. 
+
+We hope you shouldn't need to define a custom type.
+
+Below is an example of creating a custom `ftd.type` using raleway.
+
+-- ds.rendered:
+
+-- ds.rendered.input:
+
+\-- ftd.type raleway-size-12-desktop:
+size.px: 12
+weight: 400
+font-family: $raleway-assets.fonts.Raleway
+
+
+\-- ftd.type raleway-size-12-mobile:
+size.px: 12
+weight: 400
+font-family: $raleway-assets.fonts.Raleway
+
+\-- ftd.responsive-type raleway-size-12-400:
+desktop: $raleway-size-12-desktop
+mobile: $raleway-size-12-mobile
+
+\-- ftd.text: 
+role: $raleway-size-12-400
+color: $inherited.colors.text-strong
+
+`font-size: 12px, font-weight: 400` 
+
+👉 The quick brown fox jumps over the lazy dog 
+
+-- ds.rendered.output:
+
+-- ftd.text: 
+role: $raleway-size-12-400
+color: $inherited.colors.text-strong
+
+`font-size: 12px, font-weight: 400` 
+
+👉 The quick brown fox jumps over the lazy dog 
+
+-- end: ds.rendered.output
+
+-- end: ds.rendered
+
+-- end: ds.page
+
+
+
+
+
+
+
+
+
+
+-- ftd.type raleway-size-12-desktop:
+size.px: 12
+weight: 400
+font-family: $raleway-assets.fonts.Raleway
+
+
+-- ftd.type raleway-size-12-mobile:
+size.px: 12
+weight: 400
+font-family: $raleway-assets.fonts.Raleway
+
+-- ftd.responsive-type raleway-size-12-400:
+desktop: $raleway-size-12-desktop
+mobile: $raleway-size-12-mobile
+
+
+
+
+
+-- ftd.type raleway-size-12-500-desktop:
+size.px: 12
+weight: 500
+font-family: $raleway-assets.fonts.Raleway
+
+
+-- ftd.type raleway-size-12-500-mobile:
+size.px: 12
+weight: 500
+font-family: $raleway-assets.fonts.Raleway
+
+-- ftd.responsive-type raleway-size-12-500:
+desktop: $raleway-size-12-500-desktop
+mobile: $raleway-size-12-500-mobile
+
+
+
+
+
+-- ftd.type raleway-size-12-800-desktop:
+size.px: 12
+weight: 800
+font-family: $raleway-assets.fonts.Raleway
+
+
+-- ftd.type raleway-size-12-800-mobile:
+size.px: 12
+weight: 800
+font-family: $raleway-assets.fonts.Raleway
+
+-- ftd.responsive-type raleway-size-12-800:
+desktop: $raleway-size-12-800-desktop
+mobile: $raleway-size-12-800-mobile
+
+
+
+
+
+-- ftd.type raleway-size-18-desktop:
+size.px: 18
+weight: 400
+font-family: $raleway-assets.fonts.Raleway
+
+
+-- ftd.type raleway-size-18-mobile:
+size.px: 18
+weight: 400
+font-family: $raleway-assets.fonts.Raleway
+
+-- ftd.responsive-type raleway-size-18-400:
+desktop: $raleway-size-18-desktop
+mobile: $raleway-size-18-mobile
+
+
+
+
+
+-- ftd.type raleway-size-18-500-desktop:
+size.px: 18
+weight: 500
+font-family: $raleway-assets.fonts.Raleway
+
+
+-- ftd.type raleway-size-18-500-mobile:
+size.px: 18
+weight: 500
+font-family: $raleway-assets.fonts.Raleway
+
+-- ftd.responsive-type raleway-size-18-500:
+desktop: $raleway-size-18-500-desktop
+mobile: $raleway-size-18-500-mobile
+
+
+
+
+
+-- ftd.type raleway-size-18-800-desktop:
+size.px: 18
+weight: 800
+font-family: $raleway-assets.fonts.Raleway
+
+
+-- ftd.type raleway-size-18-800-mobile:
+size.px: 18
+weight: 800
+font-family: $raleway-assets.fonts.Raleway
+
+-- ftd.responsive-type raleway-size-18-800:
+desktop: $raleway-size-18-800-desktop
+mobile: $raleway-size-18-800-mobile
+
+
+
+
+
+-- ftd.type raleway-size-48-desktop:
+size.px: 48
+weight: 400
+font-family: $raleway-assets.fonts.Raleway
+
+
+-- ftd.type raleway-size-48-mobile:
+size.px: 48
+weight: 400
+font-family: $raleway-assets.fonts.Raleway
+
+-- ftd.responsive-type raleway-size-48-400:
+desktop: $raleway-size-48-desktop
+mobile: $raleway-size-48-mobile
+
+
+
+
+
+-- ftd.type raleway-size-48-500-desktop:
+size.px: 48
+weight: 500
+font-family: $raleway-assets.fonts.Raleway
+
+
+-- ftd.type raleway-size-48-500-mobile:
+size.px: 48
+weight: 500
+font-family: $raleway-assets.fonts.Raleway
+
+-- ftd.responsive-type raleway-size-48-500:
+desktop: $raleway-size-48-500-desktop
+mobile: $raleway-size-48-500-mobile
+
+
+
+
+
+-- ftd.type raleway-size-48-800-desktop:
+size.px: 48
+weight: 800
+font-family: $raleway-assets.fonts.Raleway
+
+
+-- ftd.type raleway-size-48-800-mobile:
+size.px: 48
+weight: 800
+font-family: $raleway-assets.fonts.Raleway
+
+-- ftd.responsive-type raleway-size-48-800:
+desktop: $raleway-size-48-800-desktop
+mobile: $raleway-size-48-800-mobile
